@@ -1,0 +1,42 @@
+{{define "yield"}}
+    <style>
+        .row {
+            display: flex;
+            justify-content: center;
+            margin: 10%;
+        }
+    </style>
+    <div class="row">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>Name </th>
+                <th>Branch Protections Enabled</th>
+                <th>Code Scanning Enabled</th>
+                <th>Secret Scanning Enabled</th>
+                <th>Depend-a-bot enabeld</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{ range . }}
+
+                    <tr>
+                        <td>{{ .Name }}</td>
+                        <td>
+                            {{ if eq false .Protections }} &#10060; {{ else }} &#9989; {{ end }}
+                        </td>
+                        <td>
+                            {{ if eq false .CQL }} &#10060; {{ else }} &#9989; {{ end }}
+                        </td>
+                        <td>
+                            {{ if eq false .Secrets }} &#10060; {{ else }} &#9989; {{ end }}
+                        </td>
+                        <td>
+                            {{ if eq false .Dependabot }} &#10060; {{ else }} &#9989; {{ end }}
+                        </td>
+                    </tr>
+        {{ end }}
+            </tbody>
+        </table>
+    </div>
+{{end}}

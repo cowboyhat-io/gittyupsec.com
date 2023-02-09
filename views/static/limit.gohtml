@@ -1,0 +1,33 @@
+{{ define "yield" }}
+    <style>
+        .row {
+            display: flex;
+            justify-content: center;
+            margin: 10%;
+        }
+    </style>
+    <div class="row">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h1 class="panel-title">Limit reached on GitHub Integrations.</h1>
+                <h2>Check out <a href="/pricing"> pricing </a> to upgrade your plan</h2>
+            </div>
+            <div class="panel-body">
+            </div>
+        </div>
+    </div>
+    <div class="section main mt-2xl">
+        <div class="container mt-2xl mb-2xl">
+            <div class="row items-center">
+                <div class="column align-center">
+                    <h1 class="max-w-lg text-giga text-center text-white">
+                        Scan your repos for free today.
+                    </h1>
+                    <a href="/signup" class="button xl main white mt-lg w-button">Scan</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ template "footer" }}
+{{end}}
+

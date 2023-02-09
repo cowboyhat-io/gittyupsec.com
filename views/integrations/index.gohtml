@@ -1,0 +1,54 @@
+{{define "yield"}}
+    <style>
+        .row {
+            display: flex;
+            justify-content: center;
+            margin: 10%;
+        }
+    </style>
+    <div class="row">
+            {{ if eq ( len .) 0}}
+                <a href="/integrations/new" class="btn btn-primary">
+                    New Integration
+                </a>
+            {{ else }}
+                {{ range . }}
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>GitHub Organization </th>
+                        <th>GitHub Token</th>
+                        <th>Scan</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                <td>{{.Org}}</td>
+                                <td>
+                                    <a href="/integrations/{{.ID}}/edit">
+                                        Edit
+                                    </a>
+                                </td>
+                                <td>
+                                   {{ template "Scan" }}
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>
+
+
+                        {{end}}
+                    {{ end }}
+    </div>
+{{end}}
+
+{{define "Scan"}}
+    <form action="/integrations/scan" method="POST">
+        {{ csrfField }}
+        <div class="form-row align-items-center">
+            <div class="col-auto">
+                <button type="submit" class="btn btn-danger">Scan</button>
+            </div>
+        </div>
+    </form>
+{{end}}

@@ -1,0 +1,27 @@
+{{ define "yield" }}
+    <style>
+        .row {
+            display: flex;
+            justify-content: center;
+            margin: 10%;
+        }
+    </style>
+    <div class="row">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h1 class="panel-title">Business</h1>
+                <p>Gitty Up is free to use for Open Source project maintainers and for anyone to use locally, including
+                your enterprise employees.
+                </p>
+                <p>
+                    Some, features are reserved for paying customers though, so contact us if you're an enterprise that
+                    feels like paying.
+                </p>
+            </div>
+            <div class="panel-body">
+            </div>
+        </div>
+    </div>
+
+    {{ template "footer" }}
+{{end}}

@@ -1,0 +1,29 @@
+{{ define "yield" }}
+    <style>
+        .row {
+            display: flex;
+            justify-content: center;
+            margin: 10%;
+        }
+    </style>
+    <div class="row">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h1 class="panel-title">Automatic Repo Fixin'</h1>
+                <p>
+                    Paying customers will be provided access to automated repo fixin' that means that if your repo is identified
+                    as being outside of best practices then you'll be able to <b>click</b> a button and remedy them
+                    at a repo level.
+
+                    Yet, if you're feeling <b>bold</b> then you can apply the changes across all of your
+                    GitHub Org's repos.
+                </p>
+
+            </div>
+            <div class="panel-body">
+            </div>
+        </div>
+    </div>
+
+    {{ template "footer" }}
+{{end}}

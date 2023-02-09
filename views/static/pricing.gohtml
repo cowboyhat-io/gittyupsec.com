@@ -1,0 +1,66 @@
+{{ define "yield" }}
+  <style>
+    .pricing-header .display-4 {
+      display: flex;
+      justify-content: center;
+      margin-top: 10%;
+    }
+  </style>
+<main role="main" class="container">
+  <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Pricing</h1>
+    <p class="lead">Pick the plan that best suits your needs!</p>
+  </div>
+
+  <div class="container">
+    <div class="card-deck mb-3 text-center">
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal">Free (self-host)</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>1 GitHub Org. Integration</li>
+            <li>Unlimited users</li>
+            <li>Gitty-Up Repo</li>
+            <li>Help center access</li>
+          </ul>
+          <button type="button" class="btn btn-lg btn-block btn-outline-primary"><a href="https://github.com/cowboyhat-io/gitty-up">GitHub Repo</a></button>
+        </div>
+      </div>
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal">Free (cloud)</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title"> $0 <small class="text-muted">/ mo</small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>1 GitHub Org. Integration</li>
+            <li>Unlimited users</li>
+            <li>Access to Guides</li>
+            <li>Help center access</li>
+          </ul>
+          <button type="button" class="btn btn-lg btn-block btn-outline-primary"><a href="/signup">Sign up for free</a></button>
+        </div>
+      </div>
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal">Enterprise</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">$100 <small class="text-muted">/ mo</small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>Unlimited Users</li>
+            <li>Unlimited GitHub Org. Integrations</li>
+            <li>In Depth Secret Scanning Report</li>
+            <li>Automatically fix misconfigured repos</li>
+          </ul>
+          <button type="button" class="btn btn-lg btn-block btn-primary">Contact</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ template "footer" }}
+</main>
+{{ end }}

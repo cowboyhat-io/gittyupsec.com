@@ -1,0 +1,30 @@
+{{ define "yield" }}
+    <style>
+        .row {
+            display: flex;
+            justify-content: center;
+            margin: 10%;
+        }
+    </style>
+    <div class="row">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h1 class="panel-title">GitHub Data Breaches</h1>
+                <p>
+                    Misconfigured GitHub repos have cost fortune 500 companies millions of dollars within the last decade.
+                </p>
+                <h4>Don't end up like these folks.</h4>
+                <ul>
+                    <li><a href="https://www.autonews.com/mobility-report/how-toyotas-supplier-portal-got-hacked">Toyota</a></li>
+                    <li><a href="https://www.zdnet.com/article/uber-security-breach-looks-bad-potentially-compromising-all-systems/">Uber</a></li>
+                    <li><a href="https://www.malwarebytes.com/blog/news/2023/01/slack-private-code-on-github-stolen">Slack</a></li>
+                    <li><a href="https://thenewstack.io/the-dropbox-github-data-breach/">DropBox</a></li>
+                </ul>
+            </div>
+            <div class="panel-body">
+            </div>
+        </div>
+    </div>
+
+    {{ template "footer" }}
+{{end}}
